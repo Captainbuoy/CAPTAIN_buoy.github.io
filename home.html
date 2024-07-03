@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPTAIN</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url("https://github.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/raw/main/Logos/fondo.jpg"); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la URL de tu imagen */
+            background-size: cover; /* Ajusta la imagen para cubrir toda el área del fondo */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
+            color: white;
+            margin: 0; /* Elimina el margen por defecto del body */
+            padding: 0; /* Elimina el relleno por defecto del body */
+        }
+        .footer {
+            background-color: transparent;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer img {
+            max-width: 100px; /* Ajusta el tamaño máximo del logo */
+            height: auto;
+            margin-top: 5px; /* Ajusta el margen superior del logo */
+        }
+        .tab-container {
+            width: 100%;
+        }
+
+        .tab {
+            display: none;
+        }
+
+        .tab-labels_title {
+            justify-content: space-between;
+            background-color: transparent;
+            margin-bottom: 10px;
+            font-size: 48px;
+        }
+
+        .tab-label_title {
+            cursor: pointer;
+            flex: 1;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: transparent;
+            color: black;
+            font-weight: bold;
+        }
+
+        .active-tab {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .grid-item {
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .grid-item img {
+            max-width: 100%;
+            max-width: 1000px; /* Ajusta el ancho máximo  */
+            height: auto;
+        }
+
+        .grid-item-logo {
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-item-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .grid-item-logo img {
+            max-width: 70%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-labels_title">
+        <div class="tab-label_title"> CAPTAIN</div>
+        </div>
+        <div class="tab" id="tab1">
+            <div class="grid-item">
+                <a href="https://github.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/raw/main/Output/plot.jpg" target="_blank">
+                    <img src="https://github.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/raw/main/Output/plot.jpg" alt="Florimety">
+                </a>
+            </div>
+        </div>
+    <div class="footer">
+        <img src="https://github.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/raw/main/Logos/logos.png" alt="Logo">
+    </div>
+        <script>
+            function changeTab(tabIndex) {
+                const tabs = document.querySelectorAll('.tab');
+                const tabLabels = document.querySelectorAll('.tab-label');
+
+                tabs.forEach(tab => tab.style.display = 'none');
+                tabLabels.forEach(label => label.classList.remove('active-tab'));
+
+                tabs[tabIndex].style.display = 'block';
+                tabLabels[tabIndex].classList.add('active-tab');
+            }
+
+            // Mostrar la primera pestaña por defecto al cargar la página
+            changeTab(0);
+        </script>
+    </div>
+</body>
+</html>
