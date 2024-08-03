@@ -1,134 +1,78 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAPTAIN</title>
+    <title>Captain</title>
     <style>
-        body {
-            font-family: 'Helvetica', Times, serif;
-            /*background-image: url("https://github.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/raw/main/Logos/fondo.jpg"); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la URL de tu imagen */
-            /*background-size: cover; /* Ajusta la imagen para cubrir toda el área del fondo */
-            /*background-repeat: no-repeat; /* Evita que la imagen se repita */
-            /*background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
-            color: #ADD8E6;
-            margin: 0; /* Elimina el margen por defecto del body */
-            padding: 0; /* Elimina el relleno por defecto del body */
-        }
-        .footer {
-            background-color: transparent;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
+        body, html {
+            margin: 0;
+            padding: 0;
             width: 100%;
-        }
-
-        .footer img {
-            max-width: 1000px; /* Ajusta el tamaño máximo del logo */
-            height: auto;
-            margin-top: 5px; /* Ajusta el margen superior del logo */
-        }
-        .tab-container {
-            width: 100%;
-        }
-
-        .tab {
-            display: none;
-        }
-
-        .tab-labels_title {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            background-color: transparent;
-            margin-bottom: 10px;
-            font-size: 48px;
+            align-items: center;
         }
 
-        .tab-label_title {
-            cursor: pointer;
-            flex: 1;
-            padding: 10px 20px;
+        header {
+            background-color: #004080;
+            color: white;
+            width: 100%;
+            padding: 20px;
             text-align: center;
-            background-color: transparent;
-            color: #000080;
-            font-weight: normal;
         }
 
-        .active-tab {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        .summary {
+            padding: 20px;
+            max-width: 800px;
+            text-align: center;
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+        .full-page-image {
+            background-image: url('https://github.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/raw/main/Output/plot.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 60vh;
         }
 
-        .grid-item {
-            padding: 10px;
+        footer {
+            background-color: #004080;
+            width: 100%;
+            padding: 20px;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-
-        .grid-item img {
-            max-width: 100%;
-            max-width: 800px; /* Ajusta el ancho máximo  */
-            height: auto;
-        }
-
-        .grid-item-logo {
-            padding: 10px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .grid-item-logo:hover {
-            transform: scale(1.1);
-        }
-
-        .grid-item-logo img {
-            max-width: 70%;
-            height: auto;
+        footer img {
+            height: 50px;
+            width: auto;
         }
     </style>
 </head>
 <body>
-    <div class="tab-labels_title">
-        <div class="tab-label_title"> optiCal floAt for PlasTic quAntifIcatioN - CAPTAIN</div>
-        </div>
-        <div class="tab" id="tab1">
-            <div class="grid-item">
-                <a href="https://github.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/raw/main/Output/plot.jpg" target="_blank">
-                    <img src="https://github.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/raw/main/Output/plot.jpg" alt="Florimety">
-                </a>
-            </div>
-        </div>
-    <div class="footer">
-        <img src="https://github.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/raw/main/Logos/logos.png" alt="Logo">
+
+    <header>
+        <h1>Optical float for plastic detection and tracking - CAPTAIN</h1>
+    </header>
+
+    <div class="summary">
+        <p>The Captain Project is an innovative initiative focused on enhancing maritime safety through cutting-edge technology. 
+        By integrating AI-powered systems, the project aims to provide real-time monitoring, predictive analytics, 
+        and automated decision-making to ensure the safety and efficiency of maritime operations.</p>
     </div>
-        <script>
-            function changeTab(tabIndex) {
-                const tabs = document.querySelectorAll('.tab');
-                const tabLabels = document.querySelectorAll('.tab-label');
 
-                tabs.forEach(tab => tab.style.display = 'none');
-                tabLabels.forEach(label => label.classList.remove('active-tab'));
+    <div class="full-page-image"></div>
 
-                tabs[tabIndex].style.display = 'block';
-                tabLabels[tabIndex].classList.add('active-tab');
-            }
+    <footer>
+        <img src="https://github.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/raw/main/Logos/logos.png" alt="Captain Project Logo">
+    </footer>
 
-            // Mostrar la primera pestaña por defecto al cargar la página
-            changeTab(0);
-        </script>
-    </div>
 </body>
 </html>
