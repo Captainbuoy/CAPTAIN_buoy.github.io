@@ -19,6 +19,13 @@
             align-items: center
         }
 
+        .video-container {
+            position: relative;
+            width: 80%;
+            max-height: 60vh;
+            margin: 20px 0;
+        }
+
         .full-page-video {
             width: 80%;
             max-height: 60vh;
@@ -94,14 +101,16 @@
 </head>
 <body>
     
-    <video class="full-page-video" autoplay muted loop>
-        <source src="https://github.com/Captainbuoy/CAPTAIN_buoy.github.io/raw/main/Logos/CAPTAIN_video_short.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    
-    <div class="content">
-        <h1>CAPTAIN Buoy</h1>
-        <p>Currently moored offshore Barcelona</p>
+    <div class="video-container">
+        <video class="full-page-video" autoplay muted loop>
+            <source src="https://github.com/Captainbuoy/CAPTAIN_buoy.github.io/raw/main/Logos/CAPTAIN_video_short.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="content">
+            <h1>CAPTAIN Buoy</h1>
+            <p>Currently moored offshore Barcelona</p>
+        </div>
     </div>
     
     <header>
