@@ -17,6 +17,7 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            overflow: hidden;
         }
         .background-video {
             position: absolute;
@@ -24,16 +25,18 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the video covers the entire viewport */
-            z-index: -1; /* Places the video behind other content */
+            object-fit: cover; 
+            z-index: -1; 
         }
 
         header {
-            background-color: #ADD8E6;
+            background-color: rgba(173, 216, 230, 0.8);
             color: #004080;
             width: 100%;
             padding: 20px;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         .summary {
@@ -41,6 +44,8 @@
             max-width: 800px;
             text-align: justify;
             text-justify: inter-word;
+            position: relative;
+            z-index: 1;
         }
 
         .full-page-image img {
@@ -50,22 +55,7 @@
             display: block;
             margin: 0 auto;
         }
-
-        footer {
-            background-color: #ADD8E6;
-            width: 100%;
-            padding: 20px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        footer img {
-            height: 100px;
-            width: auto;
-        }
-
+        
         .title {
             font-size: 2em; 
             margin: 20px 0;
@@ -74,6 +64,24 @@
             z-index: 1; 
             color: #004080; 
         }
+
+        footer {
+            background-color: rgba(173, 216, 230, 0.8);
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer img {
+            height: 100px;
+            width: auto;
+        }
+
     </style>
 </head>
 <body>
